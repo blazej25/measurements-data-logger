@@ -1,0 +1,81 @@
+#:kivy 2.0.0
+
+<CustLabel@Label>:
+    color: 1 , 0.250 , 0.452 , 1
+    font_size: 25
+    size_hint: 0.50,0.08
+
+<StartScreen>:
+    data_text_input: Name, Data, Godzina, Zleceniodawca, Źródło, Temperatura, Ciśnienie, Ilość
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:'Test'    
+            pos_hint: {'center_x': 0.5, 'y': 1}
+            size_hint: 1.0, 0.1
+            font_size: 30
+            
+        StartLayout:
+            cols: 2
+            rows: 12
+            padding: ('25dp', '25dp', '25dp', '25dp')
+            spacing: '20dp'
+
+            CustLabel:
+                text: 'Nazwa pliku:'            
+
+            TextInput:
+                id: Name 
+
+            CustLabel:
+                text:'Data:'
+
+            TextInput:
+                id: Data
+                text:'dd/mm/rrrr'
+
+            CustLabel:
+                text:'Godzina przyjazdu:'    
+
+            TextInput:
+                id: Godzina
+
+            CustLabel:
+                text:'Zleceniodawca:'
+
+            TextInput:
+                id: Zleceniodawca
+
+            CustLabel:
+                text:'Źródło emisji:'
+
+            TextInput:
+                id: Źródło
+
+            CustLabel:
+                text:'Personel:'
+
+            TextInput:
+                id: Personel
+
+            CustLabel:
+                text:'Temperatura otoczenia:'
+
+            TextInput:
+                id: Temperatura
+
+            CustLabel:
+                text:'Ciśnienie atmosferyczne:'
+
+            TextInput:
+                id: Ciśnienie
+
+            CustLabel:
+                text:'Ilość powtórzeń:'
+
+            TextInput:
+                id: Ilość
+
+        Button:
+            text:'Next'
+            on_press: root.save()
