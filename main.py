@@ -16,8 +16,8 @@ class Grid1Layout(GridLayout):
 
 
 class Grid2Layout(GridLayout):
-    pass
-
+    selected = ListProperty([0] * 19)
+    
 
 class StartScreen(Screen):
     data_text_input = ObjectProperty()
@@ -50,7 +50,10 @@ class StartScreen(Screen):
 
 
 class NextScreen(Screen):
-    pass
+    selected = ListProperty([0] * 19)
+
+    def print_s(self):
+        print(self.selected)
 
 
 class DataLoggerApp(App):
