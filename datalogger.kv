@@ -6,7 +6,7 @@
     size_hint: 0.50,0.08
 
 <StartScreen>:
-    data_text_input: Name, Data, Godzina, Zleceniodawca, Źródło, Temperatura, Ciśnienie, Ilość
+    data_text_input: Name, Data, Godzina, Zleceniodawca, Źródło, Personel, Temperatura, Ciśnienie, Ilość
     BoxLayout:
         orientation:'vertical'
         Label:
@@ -15,7 +15,7 @@
             size_hint: 1.0, 0.1
             font_size: 30
             
-        StartLayout:
+        Grid1Layout:
             cols: 2
             rows: 12
             padding: ('25dp', '25dp', '25dp', '25dp')
@@ -79,3 +79,126 @@
         Button:
             text:'Next'
             on_press: root.save()
+            on_press: root.manager.current = 'next'
+
+<NextScreen>:
+    Grid2Layout:
+        cols: 2
+        rows: 19
+
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
+
+        
+        CustLabel:
+            text: 'Przepływ PN-Z-04030-7:1994'
+
+        CheckBox:
