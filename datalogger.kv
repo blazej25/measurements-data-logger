@@ -82,10 +82,10 @@
             on_press: root.manager.current = 'next'
 
 <NextScreen>:
+    selected:
     BoxLayout:
         orientation:'vertical'
         Grid2Layout:
-            selected:
             cols: 2
             rows: 19
 
@@ -93,158 +93,115 @@
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[0] = 1
-                on_release: self.selected[0] = 0
+                on_press: root.update(0)
 
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[1] = 1
-                on_release: self.selected[1] = 0
-
-            CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
-
-            CheckBox:
-                on_press: self.selected[2] = 1
-                on_release: self.selected[2] = 0
-
+                on_press: root.update(1)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[3] = 1
-                on_release: self.selected[3] = 0
-
+                on_press: root.update(2)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[4] = 1
-                on_release: self.selected[4] = 0
-
+                on_press: root.update(3)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[5] = 1
-                on_release: self.selected[5] = 0
-
+                on_press: root.update(4)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[6] = 1
-                on_release: self.selected[6] = 0
-
+                on_press: root.update(5)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[7] = 1
-                on_release: self.selected[7] = 0
-
+                on_press: root.update(6)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[8] = 1
-                on_release: self.selected[8] = 0
-
+                on_press: root.update(7)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[9] = 1
-                on_release: self.selected[9] = 0
-
+                on_press: root.update(8)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[10] = 1
-                on_release: self.selected[10] = 0
-
+                on_press: root.update(9)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[11] = 1
-                on_release: self.selected[11] = 0
+                on_press: root.update(10)
 
+            CustLabel:
+                text: 'Przepływ PN-Z-04030-7:1994'
+
+            CheckBox:
+                on_press: root.update(11)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[12] = 1
-                on_release: self.selected[12] = 0
+                on_press: root.update(12)
 
+            CustLabel:
+                text: 'Przepływ PN-Z-04030-7:1994'
+
+            CheckBox:
+                on_press: root.update(13)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[13] = 1
-                on_release: self.selected[13] = 0
-
+                on_press: root.update(14)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[14] = 1
-                on_release: self.selected[14] = 0
-
+                on_press: root.update(15)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[15] = 1
-                on_release: self.selected[15] = 0
-
+                on_press: root.update(16)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[16] = 1
-                on_release: self.selected[16] = 0
-
+                on_press: root.update(17)
             
             CustLabel:
                 text: 'Przepływ PN-Z-04030-7:1994'
 
             CheckBox:
-                on_press: self.selected[17] = 1
-                on_release: self.selected[17] = 0
-
-            
-            CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
-
-            CheckBox:
-                on_press: self.selected[18] = 1
-                on_release: self.selected[18] = 0
-
-            
-            CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
-
-            CheckBox:
-                on_press: self.selected[19] = 1
-                on_release: self.selected[19] = 0
+                on_press: root.update(18)
 
         Button:
             text:'Next'
