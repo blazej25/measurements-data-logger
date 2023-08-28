@@ -1,4 +1,4 @@
-import kivy 
+import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.label import Label
@@ -22,7 +22,7 @@ class Grid2Layout(GridLayout):
 class StartScreen(Screen):
     data_text_input = ObjectProperty()
     data = ListProperty()
-    
+
 
     def get_input(self):
         for line in self.data_text_input:
@@ -33,7 +33,7 @@ class StartScreen(Screen):
         names = ('Data',
                 'Godzina przyjazdu',
                 'Zleceniodawca',
-                'Źródło emisj',
+                'Źródło emisji',
                 'Personel',
                 'Temperatura otoczenia',
                 'Ciśnienie atmosferyczne',
@@ -60,6 +60,6 @@ class DataLoggerApp(App):
         sm.add_widget(StartScreen(name='s1'))
         sm.add_widget(NextScreen(name='next'))
         return sm
-        
+
 if __name__ == '__main__':
     DataLoggerApp().run()
