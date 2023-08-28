@@ -18,6 +18,25 @@ from screens.gas_analyzer_check import GasAnalyzerCheckScreen
 from screens.helpers import HelpersScreen
 from screens.equipment_base import EquipmentBaseScreen
 
+pomiary = {0: 'Przepływ PN-Z-04030-7:1994',
+           1: 'Przepływ PN-EN-ISO 16911:2013-07',
+           2: 'O2:  PMD wg PN-EN 14789:2006',
+           3: 'CO2: NDIR wg PN-ISO 10396:2001',
+           4: 'SO2: NDIR wg PN-ISO 10396:2001',
+           5: 'NOx: CLD wg PN-EN 14792:2006',
+           6: 'CO: NDIR wg PN-ISO 10396:2001',
+           7: 'TOC: FID wg PN- EN 12619:2013',
+           8: 'N2O: NDIR wg PN-EN ISO 21258',
+           9: 'Pył PN-Z-04030-7:1994',
+           10: 'Pył PN-EN 13284-1:2017',
+           11: 'HCl: PN-EN 1911:2011',
+           12: 'HF ISO 15713:2006',
+           13: 'Hg PN-EN 13211:2006',
+           14: 'SO2 PN-EN 14791:2017',
+           15: 'H2O PN-EN 14790:2017',
+           16: 'NH3 PN-EN-ISO 21877:2020-03',
+           17: 'Metale PN-EN 14385:2005',
+           18: 'Procedura własna'}
 
 class Grid1Layout(GridLayout):
     pass
@@ -37,29 +56,41 @@ class StartScreen(Screen):
 
     def save(self):
         self.get_input()
-        names = (
-            "Data",
-            "Godzina przyjazdu",
-            "Zleceniodawca",
-            "Źródło emisji",
-            "Personel",
-            "Temperatura otoczenia",
-            "Ciśnienie atmosferyczne",
-            "Ilość powtórzeń",
-        )
+        names = ('Data',
+                'Godzina przyjazdu',
+                'Zleceniodawca',
+                'Źródło emisj',
+                'Personel',
+                'Temperatura otoczenia',
+                'Ciśnienie atmosferyczne',
+                'Ilość powtórzeń')
         i = 0
         file_name = self.data[0]
         self.data.pop(0)
 
-        with open(f"{file_name}.txt", "w") as file:
+        with open(f'{file_name}.txt', 'w') as file:
             print(self.data)
             for line in self.data:
-                file.write(f"{names[i]}: {line};\n")
+                file.write(f'{names[i]}: {line};\n')
                 i += 1
 
 
 class NextScreen(Screen):
-    pass
+    selected = ListProperty([0] * 19)
+    off = StringProperty('off')
+    on = StringProperty('on')
+
+    def update(self, index):
+        if self.selected[index] == 0:
+            self.selected[index] = 1
+        else:
+            self.selected[index] = 0
+
+    def print_s(self):
+        print(self.selected)
+
+#    def save2(self):
+#         with open(f'')
 
 
 class DataLoggerApp(App):
