@@ -12,6 +12,7 @@ from kivy.uix.checkbox import CheckBox
 from kivy.properties import StringProperty, ObjectProperty, ListProperty
 from aspiration_screen import AspirationScreen
 
+
 class Grid1Layout(GridLayout):
     pass
 
@@ -24,29 +25,30 @@ class StartScreen(Screen):
     data_text_input = ObjectProperty()
     data = ListProperty()
 
-
     def get_input(self):
         for line in self.data_text_input:
             self.data.append(line.text)
 
     def save(self):
         self.get_input()
-        names = ('Data',
-                'Godzina przyjazdu',
-                'Zleceniodawca',
-                'Źródło emisji',
-                'Personel',
-                'Temperatura otoczenia',
-                'Ciśnienie atmosferyczne',
-                'Ilość powtórzeń')
+        names = (
+            "Data",
+            "Godzina przyjazdu",
+            "Zleceniodawca",
+            "Źródło emisji",
+            "Personel",
+            "Temperatura otoczenia",
+            "Ciśnienie atmosferyczne",
+            "Ilość powtórzeń",
+        )
         i = 0
         file_name = self.data[0]
         self.data.pop(0)
 
-        with open(f'{file_name}.txt', 'w') as file:
+        with open(f"{file_name}.txt", "w") as file:
             print(self.data)
             for line in self.data:
-                file.write(f'{names[i]}: {line};\n')
+                file.write(f"{names[i]}: {line};\n")
                 i += 1
 
 
@@ -55,13 +57,13 @@ class NextScreen(Screen):
 
 
 class DataLoggerApp(App):
-
     def build(self):
         sm = ScreenManager()
-        sm.add_widget(StartScreen(name='s1'))
-        sm.add_widget(NextScreen(name='next'))
-        sm.add_widget(AspirationScreen(name='aspiration'))
+        sm.add_widget(StartScreen(name="s1"))
+        sm.add_widget(NextScreen(name="next"))
+        sm.add_widget(AspirationScreen(name="aspiration"))
         return sm
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     DataLoggerApp().run()
