@@ -10,6 +10,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.checkbox import CheckBox
 from kivy.properties import StringProperty, ObjectProperty, ListProperty
+from aspiration_screen import AspirationScreen
 
 class Grid1Layout(GridLayout):
     pass
@@ -59,6 +60,7 @@ class DataLoggerApp(App):
         sm = ScreenManager()
         sm.add_widget(StartScreen(name='s1'))
         sm.add_widget(NextScreen(name='next'))
+        sm.add_widget(AspirationScreen(name='aspiration'))
         return sm
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
+from kivy.app import Builder
 from kivy.uix.screenmanager import Screen
 
-class Aspiration(Screen):
-    pass
+class AspirationScreen(Screen):
+    Builder.load_file('aspiration.kv')
 
