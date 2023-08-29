@@ -3,7 +3,7 @@
 <CustLabel@Label>:
     color: 1 , 0.250 , 0.452 , 1
     font_size: 25
-    size_hint: 0.50,0.08
+    size_hint: 0.50,0.1
 
 <StartScreen>:
     data_text_input: Name, Data, Godzina, Zleceniodawca, Źródło, Personel, Temperatura, Ciśnienie, Ilość
@@ -17,7 +17,7 @@
 
         Grid1Layout:
             cols: 2
-            rows: 12
+            rows: 9
             padding: ('25dp', '25dp', '25dp', '25dp')
             spacing: '20dp'
 
@@ -32,7 +32,8 @@
 
             TextInput:
                 id: Data
-                text:'dd/mm/rrrr'
+                hint_text:'dd/mm/rrrr'
+                height: 30
 
             CustLabel:
                 text:'Godzina przyjazdu:'
@@ -76,42 +77,45 @@
             TextInput:
                 id: Ilość
 
-        Button:
-            text:'Next'
-            on_press: root.save()
-            on_press: root.manager.current = 'next'
+        BoxLayout:
+            orientation:'vertical'
+            Button:
+                text:'Next'
+                on_press: root.save()
+                on_press: root.manager.current = 'next'
 
-        Button:
-            text:'Aspiracja'
-            on_press: root.save()
-            on_press: root.manager.current = 'aspiration'
+            Button:
+                text:'Aspiracja'
+                on_press: root.save()
+                on_press: root.manager.current = 'aspiration'
 
-        Button:
-            text:'Pył'
-            on_press: root.save()
-            on_press: root.manager.current = 'dust'
-        Button:
-            text:'H20 14970'
-            on_press: root.save()
-            on_press: root.manager.current = 'h2o'
-        Button:
-            text:'Sprawdzenie Analizatora Gazu'
-            on_press: root.save()
-            on_press: root.manager.current = 'gas_analyzer_check'
-        Button:
-            text:'Pomocnicze'
-            on_press: root.save()
-            on_press: root.manager.current = 'helpers'
-        Button:
-            text:'Baza sprzętu'
-            on_press: root.save()
-            on_press: root.manager.current = 'equipment_base'
+            Button:
+                text:'Pył'
+                on_press: root.save()
+                on_press: root.manager.current = 'dust'
+            Button:
+                text:'H20 14970'
+                on_press: root.save()
+                on_press: root.manager.current = 'h2o'
+            Button:
+                text:'Sprawdzenie Analizatora Gazu'
+                on_press: root.save()
+                on_press: root.manager.current = 'gas_analyzer_check'
+            Button:
+                text:'Pomocnicze'
+                on_press: root.save()
+                on_press: root.manager.current = 'helpers'
+            Button:
+                text:'Baza sprzętu'
+                on_press: root.save()
+                on_press: root.manager.current = 'equipment_base'
 
 
 <NextScreen>:
     selected:
     BoxLayout:
         orientation:'vertical'
+        padding: ('25dp', '25dp', '25dp', '25dp')
         Grid2Layout:
             cols: 2
             rows: 19
@@ -123,116 +127,124 @@
                 on_press: root.update(0)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Przepływ PN-EN-ISO 16911:2013-07'
 
             CheckBox:
                 on_press: root.update(1)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'O2:  PMD wg PN-EN 14789:2006'
 
             CheckBox:
                 on_press: root.update(2)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'CO2: NDIR wg PN-ISO 10396:2001'
 
             CheckBox:
                 on_press: root.update(3)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'SO2: NDIR wg PN-ISO 10396:2001'
 
             CheckBox:
                 on_press: root.update(4)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'NOx: CLD wg PN-EN 14792:2006'
 
             CheckBox:
                 on_press: root.update(5)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'CO: NDIR wg PN-ISO 10396:2001'
 
             CheckBox:
                 on_press: root.update(6)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'TOC: FID wg PN- EN 12619:2013'
 
             CheckBox:
                 on_press: root.update(7)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'N2O: NDIR wg PN-EN ISO 21258'
 
             CheckBox:
                 on_press: root.update(8)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Pył PN-Z-04030-7:1994'
 
             CheckBox:
                 on_press: root.update(9)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Pył PN-EN 13284-1:2017'
 
             CheckBox:
                 on_press: root.update(10)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'HCl: PN-EN 1911:2011'
 
             CheckBox:
                 on_press: root.update(11)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'HF ISO 15713:2006'
 
             CheckBox:
                 on_press: root.update(12)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Hg PN-EN 13211:2006'
 
             CheckBox:
                 on_press: root.update(13)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
-
-            CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'SO2 PN-EN 14791:2017'
 
             CheckBox:
                 on_press: root.update(14)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'H2O PN-EN 14790:2017'
 
             CheckBox:
                 on_press: root.update(15)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'NH3 PN-EN-ISO 21877:2020-03'
 
             CheckBox:
                 on_press: root.update(16)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Metale PN-EN 14385:2005'
 
             CheckBox:
                 on_press: root.update(17)
 
             CustLabel:
-                text: 'Przepływ PN-Z-04030-7:1994'
+                text: 'Procedura własna'
 
             CheckBox:
                 on_press: root.update(18)
 
-        Button:
-            text:'Next'
-            on_press: root.print_s()
+        BoxLayout:
+            orientation:'horizontal'
+            size_hint: 1.0,0.1
+            padding: ('5dp', '5dp', '5dp', '5dp')
+
+            Button:
+                text:'Previous'
+                on_press: root.manager.current = 's1'
+
+            Button:
+                text:'Next'
+                on_press: root.print_s()
+
+

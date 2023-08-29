@@ -10,6 +10,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.checkbox import CheckBox
 from kivy.properties import StringProperty, ObjectProperty, ListProperty
+from kivy.config import Config
 
 from screens.aspiration import AspirationScreen
 from screens.dust import DustScreen
@@ -17,6 +18,8 @@ from screens.h2o import H2OScreen
 from screens.gas_analyzer_check import GasAnalyzerCheckScreen
 from screens.helpers import HelpersScreen
 from screens.equipment_base import EquipmentBaseScreen
+
+Config.set('graphics', 'window_state', 'maximized')
 
 pomiary = {0: 'Przepływ PN-Z-04030-7:1994',
            1: 'Przepływ PN-EN-ISO 16911:2013-07',
@@ -87,6 +90,10 @@ class NextScreen(Screen):
             self.selected[index] = 0
 
     def print_s(self):
+        for i in range(19):
+            if self.selected[i] == 1:
+                print(pomiary[i])
+
         print(self.selected)
 
 #    def save2(self):
