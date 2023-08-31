@@ -18,6 +18,8 @@ from screens.h2o import H2OScreen
 from screens.gas_analyzer_check import GasAnalyzerCheckScreen
 from screens.helpers import HelpersScreen
 from screens.equipment_base import EquipmentBaseScreen
+from screens.menu import MenuScreen
+from screens.flows import FlowsScreen
 
 Config.set('graphics', 'window_state', 'maximized')
 
@@ -80,8 +82,6 @@ class StartScreen(Screen):
 
 class NextScreen(Screen):
     selected = ListProperty([0] * 19)
-    off = StringProperty('off')
-    on = StringProperty('on')
 
     def update(self, index):
         if self.selected[index] == 0:
@@ -106,12 +106,14 @@ class DataLoggerApp(App):
         sm = ScreenManager()
         sm.add_widget(StartScreen(name="s1"))
         sm.add_widget(NextScreen(name="next"))
+        sm.add_widget(MenuScreen(name="menu"))
         sm.add_widget(AspirationScreen(name="aspiration"))
         sm.add_widget(DustScreen(name="dust"))
         sm.add_widget(H2OScreen(name="h2o"))
         sm.add_widget(GasAnalyzerCheckScreen(name="gas_analyzer_check"))
         sm.add_widget(HelpersScreen(name="helpers"))
         sm.add_widget(EquipmentBaseScreen(name="equipment_base"))
+        sm.add_widget(FlowsScreen(name="flows"))
         return sm
 
 

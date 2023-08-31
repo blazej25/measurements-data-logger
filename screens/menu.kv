@@ -1,0 +1,28 @@
+#:kivy 2.0.0
+
+<MenuScreen>:
+    BoxLayout:
+        orientation:'vertical'
+        Grid1Layout:
+            rows: 2
+            cols: 2
+            
+            Button:
+                text:'Aspiracje'
+                on_press: root.manager.current = 'aspiration'
+
+            Button:
+                text:'Pyły'
+                on_press: root.manager.current = 'dust'
+            
+            Button:
+                text:'Przepływy'
+                on_press: root.manager.current = 'flows'
+
+            Button:
+                text:'H20'
+                on_press: root.manager.current = 'h20'
+        
+        Button:
+            text:'Back'
+            on_press: root.manager.current = 's1'
