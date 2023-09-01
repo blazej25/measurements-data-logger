@@ -43,13 +43,6 @@ pomiary = {0: 'Przepływ PN-Z-04030-7:1994',
            17: 'Metale PN-EN 14385:2005',
            18: 'Procedura własna'}
 
-class Grid1Layout(GridLayout):
-    pass
-
-
-class Grid2Layout(GridLayout):
-    pass
-
 
 class StartScreen(Screen):
     data_text_input = ObjectProperty()
@@ -95,9 +88,6 @@ class NextScreen(Screen):
                 print(pomiary[i])
 
         print(self.selected)
-
-#    def save2(self):
-#         with open(f'')
 
 
 class DataLoggerApp(App):
