@@ -1,10 +1,17 @@
-<H20Screen>:
-    GridLayout:
-        cols: 1
-        rows: 1
+#:kivy 2.0.0
 
-        CustLabel:
-            text: 'H20 Screen 1'
+<H2OScreen>:
+    FloatLayout:
+        Label:
+            text:'Ilość pomiarów'
+            size_hint: 0.5, 0.05
+            font_size: 20
+            anchor_x: 'left'
+            anchor_y: 'top'
 
-        CheckBox:
-
+        TextInput:
+            id: num 
+            size_hint: 0.5, 0.05
+            anchor_x: 'right'
+            anchor_y: 'top'
+            on_text: on_text_print()
