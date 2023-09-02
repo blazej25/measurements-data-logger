@@ -114,6 +114,5 @@ class DataLoggerApp(App):
         sm.add_widget(EquipmentBaseScreen(name="equipment_base"))
         return sm
 
-
 if __name__ == "__main__":
     DataLoggerApp().run()

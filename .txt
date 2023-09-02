@@ -1,0 +1,8 @@
+Data: ;
+Godzina przyjazdu: ;
+Zleceniodawca: ;
+Źródło emisj: ;
+Personel: ;
+Temperatura otoczenia: ;
+Ciśnienie atmosferyczne: ;
+Ilość powtórzeń: ;

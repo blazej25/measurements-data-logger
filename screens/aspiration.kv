@@ -1,11 +1,12 @@
 <AspirationScreen>:
-    Grid2Layout:
-        cols: 2
-        rows: 3
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Aspiracja'
+        Label:
+            text: 'Pomiary'
+    Button:
+        text: 'Dodaj pomiar'
+        size: "10dp", "5dp"
 
-        CustLabel:
-            text: 'Aspiration Screen '
-        TextInput:
-            number_of_measurements: measurements
-            id: measurements
-        CheckBox:
+
